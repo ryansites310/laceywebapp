@@ -1,4 +1,4 @@
-export const navigation = {
+export const globalNavigation = {
     links: [
         {
             'label': 'Home',
