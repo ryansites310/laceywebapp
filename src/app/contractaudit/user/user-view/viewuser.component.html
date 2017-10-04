@@ -1,0 +1,122 @@
+﻿<!-- title card -->
+<div class="sdk-card">
+    <div class="sdk-card-title">
+        View User
+    </div>
+    <div class="sdk-card-desc">
+        View User details, or Cancel and return to User list...
+    </div>
+</div>
+
+<!-- content card -->
+<!-- begin outer container -->
+<div class="container-fluid sdk-card">
+    <div class="row">
+        <!-- begin inner left container -->
+        <div class="col-xs-12 col-md-6">
+
+            <!-- active -->
+            <div class="row">
+                <div class="col-xs-6 bottom5">
+                    <p-checkbox styleclass="bottom0" disabled="true" id="viewuserCbxActive" label="Active" [(ngModel)]="!user.logicalDelete" binary="true"></p-checkbox>
+                </div>
+            </div>
+
+            <!-- first name -->
+            <div class="form-group">
+                <label for="viewuserLblFirstName" class="control-label">First Name:</label>
+                <div>
+                    <label id="viewuserLblFirstName" class="form-control">{{user?.firstName}}</label>
+                </div>
+            </div>
+
+            <!-- middle name -->
+            <div class="form-group">
+                <label for="viewuserLblMiddleName" class="control-label">Middle Name:</label>
+                <div>
+                    <label id="viewuserLblMiddleName" class="form-control">{{user?.middleName}}</label>
+                </div>
+            </div>
+
+            <!-- last name -->
+            <div class="form-group">
+                <label for="viewuserLblLastName" class="control-label">Last Name:</label>
+                <div>
+                    <label id="viewuserLblLastName" class="form-control">{{user?.lastName}}</label>
+                </div>
+            </div>
+
+            <!-- msid -->
+            <div class="form-group">
+                <label for="viewuserLblMsid" class="control-label">MSID:</label>
+                <div>
+                    <label id="viewuserLblMsid" class="form-control">{{user?.userName}}</label>
+                </div>
+            </div>
+
+            <!-- email -->
+            <div class="form-group">
+                <label for="viewuserLblEmail" class="control-label">Email:</label>
+                <div>
+                    <label id="viewuserLblEmail" class="form-control">{{user?.email}}</label>
+                </div>
+            </div> 
+
+        </div>
+        <!-- end inner left container -->
+
+        <!-- begin inner right container -->
+        <div class="col-xs-12 col-md-6">
+
+            <!-- role -->
+            <div class="form-group top30">
+                <label for="viewuserLblRole" class="control-label">Role:</label>
+                <div>
+                    <label id="viewuserLblRole" class="form-control">{{user?.roleName}}</label>
+                </div>
+            </div> 
+
+            <!-- payer -->
+            <div class="form-group">
+                <label for="viewuserLblPayer" class="control-label">Payer:</label>
+                <div>
+                    <label id="viewuserLblPayer" class="form-control">{{user?.payerName}}</label>
+                </div>
+            </div>
+
+            <!-- business segments -->
+            <div class="form-group">
+                <label for="viewuserDlSegments" class="control-label">Business Segments:</label>               
+                <p-dataList id="viewuserDlSegments" [value]="user.userBusinessSegments">
+                    <ng-template let-segment pTemplate="item">
+                        <div class="business-segment-item-viewuser">
+                        {{segment.businessSegmentName}}
+                        </div>
+                    </ng-template>
+                </p-dataList>
+            </div>
+
+            <!-- audit -->
+            <div class="form-group top30">
+                <label for="viewuserLblAuditTeam" class="control-label">Audit Team:</label>
+                <div>
+                    <label id="viewuserLblAuditTeam" class="form-control">{{user?.auditTeamName}}</label>
+                </div>
+            </div>                
+
+        </div>
+        <!-- end inner right container -->
+
+        <!-- common component -->
+        <div class="col-xs-12 col-md-12">
+            <app-user-bar [user]="user"></app-user-bar>
+        </div>
+
+         <!-- buttons -->
+        <div class="col-xs-12 col-md-12 user-action-button-wrapper">
+            <button id="viewuserBtnCancel" pButton type="button" label="Cancel" icon="fa-arrow-left" [routerLink]="['/user']"></button>
+        </div>
+    </div>
+</div>
+<!-- end outer container -->
+

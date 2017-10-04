@@ -1,0 +1,12 @@
+<li class="list-group-item" *ngIf="(link != null && link.children == null || link != null && link.children.length == 0) && visibleByRole" routerLink="{{link.url}}" title="{{link.label}}" (click)="childToggle($event)">
+  <i class="fa {{link.icon}} icon"></i> <span [ngClass]="{'hidden' : !sideNavExpanded}">{{link.label}}</span>
+</li>
+<li class="list-group-item hasChildren" *ngIf="link != null && link.children != null && link.children.length > 0 && visibleByRole" (click)="toggle($event, 'topli')" [ngClass]="{'active' : link.show}">
+  <span>
+    <i class="fa {{link.icon}} icon"></i> <span [ngClass]="{'hidden' : !sideNavExpanded}">{{link.label}}</span>  
+    <i class="fa pull-right expander" [ngClass]="{'fa-chevron-down' : link.show, 'fa-chevron-right' : !link.show }"></i>
+  </span>
+  <ul class="list-group child-list-group" [ngClass]="{'active' : link.show}">
+    <app-nav-item *ngFor="let childLink of link.children" [link]="childLink" [sideNavExpanded]="sideNavExpanded"></app-nav-item>
+  </ul>
+</li> 

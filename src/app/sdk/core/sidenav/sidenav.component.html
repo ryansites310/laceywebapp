@@ -1,0 +1,12 @@
+<div *ngIf="enableSideNav" class="side-menu-container">
+  <button class="btn-toggle" [ngClass]="{'active': visible }" (click)="toggle($event)">    
+    <a class="nav-toggle" href="#"><span></span></a>
+  </button>
+  <div class="side-menu" [ngClass]="{'active': visible}">
+    <div class="side-menu-content">
+      <ul class="list-group">
+        <app-sidenav-item *ngFor="let link of navigation.links" [link]="link" [sideNavExpanded]="visible"></app-sidenav-item>        
+      </ul>
+    </div>
+  </div>
+</div>

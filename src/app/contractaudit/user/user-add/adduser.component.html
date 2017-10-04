@@ -1,0 +1,101 @@
+﻿<!-- title card -->
+<div class="sdk-card">
+  <div class="sdk-card-title">
+    Edit Study Guide
+  </div>
+  <div class="sdk-card-desc">
+    Edit and Save, or Cancel and return to Study Guide list...
+  </div>
+</div>
+
+<!-- content card -->
+<!-- begin outer container -->
+<div class="container-fluid sdk-card">
+  <div class="row">
+    <!-- begin form -->
+    <form id='edituserForm' #editUserForm="ngForm" (ngSubmit)="editUser()" #spyForm>
+
+      <div class="col-xs-12 col-md-12">
+        <!-- test name -->
+        <div class="form-group">
+          <label for="edituserTbxFirstName">Name:</label>
+          <div>
+            <input pInputText id="edituserTbxFirstName" required [(ngModel)]="studyGuide.testName" name="userFirstName"
+              class="form-control" #userFirstName="ngModel" />
+          </div>
+          <div [hidden]="userFirstName.valid || userFirstName.pristine" class="alert alert-danger alert-height">
+            Required
+          </div>
+        </div>
+      </div>
+
+      <!-- common component -->
+      <div class="col-xs-12 col-md-12">
+        <app-user-bar [user]="studyGuide"></app-user-bar>
+      </div>
+
+      <div class="col-xs-12 col-md-12">
+        <p-dataTable id="userDtList" [value]="cards" [totalRecords]="totalRecords"
+          [loading]="loading" loadingIcon="fa-spinner">
+          <p-header>Study Cards</p-header>
+          <p-header>
+            <div class="ui-helper-clearfix" style="width:100%">
+              <button id="userBtnAdd" type="button" pButton icon="fa-plus" style="float:right" (click)="addCard()" label="Add New Card"></button>
+            </div>
+          </p-header>
+          <p-column field="rowId" hidden="true" header="Id"></p-column>
+          <p-column field="question" header="Front"></p-column>
+          <p-column field="answer" header="Back"></p-column>
+          <p-column>
+            <ng-template pTemplate="header">
+              <div></div>
+            </ng-template>
+            <ng-template let-card="rowData" pTemplate="body">
+              <button id="userBtnEdit" type="button" pButton (click)="editCard(card)" icon="fa-pencil"></button>
+            </ng-template>
+          </p-column>
+        </p-dataTable>
+      </div>
+
+      <p-dialog header="Card Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" width="400"
+        (onAfterHide)="onDialogHide()">
+        <div class="col-xs-12 col-md-12">
+          <div class="form-group">
+            <label for="adduserTbxMsid">Front:</label>
+            <div>
+              <textarea pInputTextarea id="adduserTbxMsid" required [(ngModel)]="selectedCard.question" name="userMsid" class="form-control"
+                #userMsid="ngModel"></textarea>
+            </div>
+            <div [hidden]="userMsid.valid || userMsid.pristine" class="alert alert-danger alert-height">
+              Required, must be alpha-numeric...
+            </div>
+          </div>
+
+          <!-- email -->
+          <div class="form-group">
+            <label for="adduserTbxEmail">Back:</label>
+            <div>
+              <textarea pInputTextarea id="adduserTbxEmail" required [(ngModel)]="selectedCard.answer" name="userEmail" class="form-control"
+                #userEmail="ngModel"></textarea>
+            </div>
+            <div [hidden]="userEmail.valid || userEmail.pristine" class="alert alert-danger alert-height">
+              Required, must be valid email address...
+            </div>
+          </div>
+        </div>
+      </p-dialog>
+
+
+
+      <p-confirmDialog></p-confirmDialog>
+
+      <!-- buttons -->
+      <div class="col-xs-12 col-md-12 user-action-button-wrapper">
+        <button pButton type="submit" id="edituserBtnSave" label="Save" icon="fa-check" [disabled]="(!editUserForm.form.dirty) || editUserForm.form.invalid"></button>
+        <button pButton type="button" id="edituserBtnReturn" label="Cancel" icon="fa-arrow-left" [routerLink]="['/user']"></button>
+      </div>
+
+    </form>
+  </div>
+</div>
+<!-- end outer container -->

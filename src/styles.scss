@@ -1,0 +1,1038 @@
+$optum-light-gray : #B3B3B3;
+$optum-medium-gray : #666666;
+$optum-dark-gray: #333333;
+
+$optum-orange: #ff6699;
+$optum-light-orange: #ff9999;
+$optum-yellow: #EAAB00;
+$color-green-5: #93AE3E;
+$color-Turquoise-5: #499FA6;
+$color-purple-5: #6C66AE;
+$color-red-5: #B75D65;
+
+/** Alerts **/
+$color-red-6: #A93C47;
+$color-green-6: #7e9e16;
+$color-blue-6-5: #0064a4;
+
+
+/** Validation **/
+$ng-valid: #42A948;
+$ng-invalid: #a94442;
+
+/** Material Card **/
+$card-box-shadow: silver;
+$card-title-color: #616161;
+$card-desc-color: #7f7f7f;
+
+
+// $theme variable is to set themes
+// current themes are
+// dark
+// light
+
+$theme : "light";
+
+@mixin darkTheme {
+   body {
+        background: $optum-medium-gray;
+    }
+
+    header img {
+        margin-left:2rem;
+    }
+}
+
+@if $theme=="dark" {
+    @include darkTheme()
+}
+
+@mixin darkTheme {
+   body {
+        background: $optum-dark-gray;
+    }
+
+    header img {
+        margin-left:2rem;
+    }
+}
+
+@if $theme=="dark" {
+    @include darkTheme()
+}
+
+input[type=text]::-ms-clear { display: none; }
+
+body {
+   padding-top:83px;
+   padding-bottom:70px;
+}
+
+.footer {
+    text-align: center;
+    overflow: hidden;
+    background:white;
+    border-top:.05rem solid $optum-light-gray;
+}
+
+
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+ .optum-header {
+     background:#fff;
+    .global-nav {
+        background: $optum-medium-gray;
+        text-align: right;
+        padding: .5rem 0 0 0;
+        color:#fff;
+        margin-left:-15px;
+        margin-right:-15px;
+        height:3rem;
+        font-size: 1.25rem;    
+        ul {
+            margin-right:2rem;
+            li {
+                display:inline-block;
+                padding:0 0 0 1rem;
+                background:transparent;
+                color:#fff;
+                border:none;
+                cursor:pointer;
+                border-radius: 0;
+                margin:0;
+            }
+            li:active, li:hover {
+                background:transparent;
+            }           
+            a {
+                color:#fff;
+                text-decoration: none;
+            }
+        }
+        .child-list-group {
+            display:none;
+            position:absolute;
+            top:2.5rem;
+            left:0;
+            width:100%;
+        }
+        .child-list-group.active {
+            display:block;
+            
+            li {
+                cursor:pointer;
+                background:#eee;                
+                color:$optum-medium-gray;
+                min-width:15rem;
+                text-align: left;
+                padding:.75rem;
+                border-radius: 0;
+                border-left:solid 4px transparent;
+            } 
+            li:hover, li:active {
+                background: #fff;
+                border-left:solid 4px $optum-orange;
+            }           
+        }
+    }     
+    border-bottom:1px solid red;
+    .navbar-brand {
+        padding:0;
+        img {
+            display:inline-block;
+            height:4.75rem;
+        }   
+        color: $optum-orange;    
+    }
+    border:.083rem solid silver;
+    z-index:10;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(179,179,179,.75);
+} 
+
+// Side Nav Base Settings (closed)
+.list-group-item:last-child {
+    border-radius: 0;
+}
+#wrapper {
+    padding-left: 50px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#menu-toggle {
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: $optum-medium-gray;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 75px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        .list-group {
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            width:100%;   
+            text-align: center;     
+            li {  
+                .nav-label {
+                    display:none;
+                    padding:0;
+                    margin:0;
+                    line-height: .5;
+                    font-size:1.25rem;
+                } 
+                .expander {
+                    margin-top:1rem;
+                }
+                border-left:none;
+                border-right:none;
+                line-height: 40px;
+                cursor:pointer;
+                background:$optum-medium-gray;
+                color:#fff;
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: #fff;
+                }
+                a:hover {
+                    text-decoration: none;
+                    color: #fff;
+                }
+                a:active, a:focus {
+                    text-decoration: none;
+                }
+            }
+            li:hover {
+                background:$optum-light-gray;
+            }          
+            .hasChildren  {
+                padding-left:0;
+                padding-right:0;
+                padding-bottom:0;              
+                ul {
+                    border-radius: 0;
+                    li {
+                        border-radius: 0;
+                        padding-top:1.5rem;
+                        vertical-align: middle;
+                        text-align: center;
+                        line-height: 20px;
+                        color:$optum-orange;
+                        background:#fff;
+                        border-color:$optum-orange;
+                        height:5.5rem;
+                    }
+                    li:hover {
+                        background: $optum-orange!important;
+                        color:#fff;
+                    }
+                }                
+            }
+            .hasChildren.active{
+                background: $optum-dark-gray;
+            }
+        }
+        .child-list-group.active{        
+                display:block;
+                width:100%;
+                li {
+                    border-left:none;
+                    border-right:none;
+                    border-radius: 0;
+                }
+        }
+        .list-group-item.toggler {
+            padding:0;
+            margin:0;
+            text-align: center;
+            height:5rem;
+        }
+        .child-list-group {  
+            display:none; 
+            padding:0;
+            margin:0;
+            li {
+                padding:0;
+                margin:0;
+            }
+        }
+    }
+    .sidebar-brand {
+        height: 65px;
+        font-size: 18px;
+        line-height: 60px;
+        a {
+            color: #999999;
+        }
+        a:hover {
+            color: #fff;
+            background: none;
+        }
+    }
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    margin-right:50px;
+}
+
+.navbar-collapse.collapse, .navbar-collapse.collapsing, .navbar-collapse.collapse.in {
+    padding:0;
+    margin:0 -1.5rem;
+    ul {
+        width:100%;
+        margin:0;
+        padding:0;
+        li {
+            text-indent: 5px;
+            width:100%;
+            margin:0;
+            padding:1rem 0 .15rem 0;
+            cursor:pointer;
+            border-left:none;
+            border-right:none;
+            border-bottom: $optum-dark-gray;
+            background:#eee;
+            min-height: 4.5rem;
+            .child-list-group { 
+                display:none;               
+                margin:0;
+                margin-top:1rem;
+                li {
+                    text-indent: 15px;
+                    margin:0;
+                    padding:1rem 0 1rem 0;   
+                    border-left:.2rem solid transparent;  
+                    color:$optum-dark-gray;               
+                }
+                li:hover, li:active {
+                    background:#fff;
+                    border-left:.2rem solid $optum-light-orange;
+                }
+            }
+        }
+        li.hasChildren.active {
+            background:$optum-light-orange;
+            color:#fff;
+            .child-list-group {
+                display:block;
+            }
+        }
+
+    }
+}
+
+
+// Toggled (Open) SideNav styles
+
+
+@media(min-width:768px) {
+    #wrapper {
+        display: block;        
+    }
+
+    #wrapper.toggled {
+        padding-left: 250px;
+        #sidebar-wrapper {
+                width: 250px;
+                .list-group {
+                    width:250px;
+                    li {      
+                        padding-top:1rem;
+                        padding-bottom: 1rem;                  
+                        .nav-label {
+                            display:block;
+                        }
+                        .expander {
+                            position:absolute;
+                            top:0;
+                            right:0;
+                            margin-top:2.5rem;
+                            margin-right:2.5rem;
+                        }
+                        .child-list-group {
+                            margin-top:1rem;
+                            margin-bottom:-1rem;
+                        }
+                    }
+                }
+                
+            }
+         // side nav expanded main content style
+         #page-content-wrapper {
+            position: relative;
+            margin-right: 0;
+
+        }
+    }
+    #sidebar-wrapper {
+        width: 75px;  
+    }
+    // collapsed side nav main content style
+    #page-content-wrapper {
+        padding:10px 10px 0 40px;
+        position: relative;
+    }
+
+        background-color: black;
+        border-color: #337ab7;
+    }
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+	border-color: $optum-medium-gray;
+} 
+
+.main-content {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height:52rem;
+    padding-top:1rem;
+    padding-bottom: 10rem;
+}
+
+.top5 { margin-top:5px; }
+.top7 { margin-top:7px; }
+.top10 { margin-top:10px; }
+.top15 { margin-top:15px; }
+.top17 { margin-top:17px; }
+.top20 { margin-top:20px; }
+.top25 { margin-top:25px; }
+.top30 { margin-top:30px; }
+
+.bottom0 { margin-bottom:0px; }
+.bottom5 { margin-bottom:5px; }
+.bottom7 { margin-bottom:7px; }
+.bottom10 { margin-bottom:10px; }
+.bottom15 { margin-bottom:15px; }
+.bottom17 { margin-bottom:17px; }
+.bottom20 { margin-bottom:20px; }
+.bottom25 { margin-bottom:25px; }
+.bottom30 { margin-bottom:30px; }
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid $ng-valid; /* green */
+}
+
+.ng-invalid:not(form)  {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+.form-group > label {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.sdk-card {
+    box-shadow: 0px 1px 2px 0px $card-box-shadow;
+    margin-top: 10px !important; 
+    margin-bottom: 10px !important; 
+    margin-left: -20px !important;
+    margin-right: 20px !important; 
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 20px;
+    padding-right: 20px;   
+    }
+    .sdk-card-title {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        color: $card-title-color;
+    }
+    .sdk-card-desc {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        padding-top: 4px;
+        color: $card-desc-color;
+    }
+/* When border is desired, with rounded corners, without drop shadow.. */
+.sdk-panel
+  {
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+
+    //border: 1px solid #ccc;
+    //border-radius: 4px;
+    //box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075);
+  }
+
+  .sdk-panel-cbx
+  {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075);
+    height: 34px !important;
+    padding-top: 5px;
+    padding-left: 12px;
+  }
+
+  .sdk-panel-userbar
+  {
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    min-height: 34px;    
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075);
+    padding-top: 5px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+  }
+
+/** primeNg pButton styles *******************************************************/ 
+// normal state
+.ui-widget-header .ui-button, .ui-widget-content .ui-button, .ui-button {
+	border: 1px solid #888B8D;
+	color: #2b2b2b;
+	background: #EFEFEE;
+	transition: background-color .2s;
+}
+
+// hover
+.ui-widget-header .ui-button:enabled:hover, 
+.ui-widget-header .ui-button:focus, 
+.ui-widget-content .ui-button:enabled:hover, 
+.ui-widget-content .ui-button:focus, 
+.ui-button:enabled:hover, .ui-button:focus {
+	border: 1px solid #E87722;
+	background: #ffffff;
+	outline: 0 none;	
+	color: #2b2b2b;
+}
+
+// active
+.ui-widget-header .ui-button:enabled:active, 
+.ui-widget-content .ui-button:enabled:active, 
+.ui-button:enabled:active {
+	border: 1px solid #E87722;
+	background: #E87722;
+	color: #ffffff;
+}
+
+
+@mixin darkTheme {
+   body {
+        background: #333333;
+        color:#fff;
+    }
+
+   p, label {
+        color:#fff;
+    }
+
+
+    .sdk-card-title {
+        color:#fff;
+    }
+    .sdk-card-desc {
+        color:#fff;   
+    }
+
+    footer {
+        background:#333333!important;
+        border-top:1px solid $optum-dark-gray;
+    }
+}
+
+@if $theme=="dark" {
+    @include darkTheme()
+}
+
+/** End primeNg pButton styles *******************************************************/ 
+
+
+/** primeNg ToggleButton styles *******************************************************/ 
+
+// off state
+
+.ui-togglebutton.ui-button.ui-state-default, .ui-selectbutton .ui-button.ui-state-default {	
+    border: 1px solid #888B8D;
+	color: #2b2b2b;
+	background: #EFEFEE;
+	transition: background-color .2s;
+}
+
+// on state
+.ui-togglebutton.ui-button.ui-state-active, .ui-selectbutton .ui-button.ui-state-active {
+	border: 1px solid #E87722;
+	background: #E87722;
+	color: #ffffff;
+}
+
+.ui-togglebutton.ui-button.ui-state-focus,
+.ui-selectbutton .ui-button.ui-state-focus.ui-state-active {
+	box-shadow: 0px 0px 5px $optum-light-orange;
+}
+
+
+
+
+
+/** primeNg AutoComplete styles *******************************************************/ 
+div.ui-autocomplete-panel > ul > li:hover,
+div.ui-autocomplete-panel > ul > li.ui-state-highlight{
+    background: #E87722;
+}
+
+p-autocomplete.ng-valid[required] > span > input, p-autocomplete.ng-valid.required > span > input {
+    border-left: 5px solid $ng-valid; /* green */
+}
+
+p-autocomplete.ng-invalid:not(form) > span > input {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+p-autocomplete.ng-valid[required], p-autocomplete.ng-valid.required {
+    border-left: 0 none;
+}
+
+p-autocomplete.ng-invalid:not(form) {
+    border-left: 0 none;
+}
+
+/** End primeNg AutoComplete styles *******************************************************/ 
+
+/** primeNg Checkbox/Radio Button styles *******************************************************/ 
+.ui-chkbox-box.ui-state-active, .ui-radiobutton-box.ui-state-active {
+	border: 1px solid $optum-orange;
+	background: $optum-light-orange;
+	color: #FFFFFF;
+}
+
+.ui-chkbox-box.ui-state-focus.ui-state-active {
+	background: $optum-light-orange;
+}
+
+.ui-chkbox-box.ui-state-focus, .ui-radiobutton-box.ui-state-focus {
+	box-shadow: 0px 0px 5px $optum-light-orange
+}
+
+/** End primeNg Checkbox/Radio Button styles *******************************************************/ 
+
+/** primeNg Dropdown styles *******************************************************/ 
+p-dropdown.ng-valid[required] > div, 
+p-dropdown.ng-valid.required  > div {
+    border-left: 5px solid $ng-valid; /* green */
+}
+
+p-dropdown.ng-invalid:not(form) > div {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+p-dropdown.ng-valid[required], p-dropdown.ng-valid.required {
+    border-left: 0 none;
+}
+
+p-dropdown.ng-invalid:not(form) {
+    border-left: 0 none;
+}
+
+.ui-dropdown-panel .ui-dropdown-item:hover:not(.ui-state-highlight) {
+	border-color: #c0c0c0;
+	background: $optum-light-orange;
+	color: #212121;
+}
+
+.ui-widget-header .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-state-highlight {
+	border-color: $optum-orange;
+	background: $optum-light-orange;
+	color: #FFFFFF;
+}
+
+/** End primeNg Dropdown styles *******************************************************/ 
+
+.ui-inputswitch-on {
+	background: $optum-orange !important;
+	color: #ffffff !important;
+}
+
+/** primeNg Spinner styles *******************************************************/ 
+p-spinner.ng-valid[required] > span > input, 
+p-spinner.ng-valid.required  > span > input{
+    border-left: 5px solid $ng-valid; /* green */
+}
+
+p-spinner.ng-invalid:not(form) > span > input{
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+p-spinner.ng-valid[required], p-spinner.ng-valid.required {
+    border-left: 0 none;
+}
+
+p-spinner.ng-invalid:not(form) {
+    border-left: 0 none;
+}
+
+.ui-dropdown-panel .ui-dropdown-item:hover:not(.ui-state-highlight) {
+	border-color: #c0c0c0;
+	background: $optum-light-orange;
+	color: #212121;
+}
+
+.ui-widget-header .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-state-highlight {
+	border-color: $optum-orange;
+	background: $optum-light-orange;
+	color: #FFFFFF;
+}
+/** End primeNg Dropdown styles *******************************************************/ 
+
+/** primeNg Listbox styles ***********************************************************/
+div.ui-listbox {
+    width: 100%;
+}
+
+p-listbox.ng-valid > div {
+    border-left: 5px solid $ng-valid; /* green */
+}
+
+p-listbox.ng-invalid:not(form) > div {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+p-listbox.ng-valid[required], p-listbox.ng-valid.required {
+    border-left: 0 none;
+}
+
+p-listbox.ng-invalid:not(form) {
+    border-left: 0 none;
+}
+/** End primeNg Listbox styles *******************************************************/
+
+/** primeNg Radio Button styles *******************************************************/
+label.ui-radiobutton-label {
+    padding-top: 6px;  
+}
+
+p-radiobutton.ng-invalid:not(form) {
+    border-left: 0 none;
+}
+
+div.ui-g.sdk-panel {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+.isValid {
+    border-left: 5px solid $ng-valid !important;
+}
+
+.isInvalid {
+    border-left: 5px solid $ng-invalid !important;
+}
+/** End primeNg Radio Button styles ****************************************************/
+
+/** primeNg Calendar styles ***********************************************************/
+span.ui-calendar, input.ui-inputtext {
+    width: 100%;
+    height: 34px;
+}
+
+p-calendar.ng-valid > span > input {
+    border-left: 5px solid $ng-valid; /* green */
+}
+
+p-calendar.ng-invalid:not(form) > span > input {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+p-calendar.ng-valid[required], p-calendar.ng-valid.required {
+    border-left: 0 none;
+}
+
+p-calendar.ng-invalid:not(form) {
+    border-left: 0 none;
+}
+/** End primeNg Calendar styles *******************************************************/
+
+/** primeNg Multi Select styles *******************************************************/
+div.ui-multiselect {    
+    width: 100%;
+}
+/** End primeNg Multi Select styles ****************************************************/
+
+p-listbox.ng-valid > div {
+    border-left: 5px solid $ng-valid; /* green */
+}
+
+p-listbox.ng-invalid:not(form) > div {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+p-listbox.ng-valid[required], p-listbox.ng-valid.required {
+    border-left: 0 none;
+}
+
+p-listbox.ng-invalid:not(form) {
+    border-left: 0 none;
+}
+
+/** primeNg Slider styles *******************************************************/
+input#slidertext.ng-invalid:not(form) {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+input#slidertext.ng-valid {
+    border-left: 5px solid $ng-valid; /* green */
+}
+/** End primeNg Slider styles *******************************************************/
+
+/** primeNg Tri State Checkbox styles *******************************************************/
+.noValidate {
+    border-left: 0px !important;
+}
+/** End primeNg Tri State Checkbox styles *******************************************************/
+
+/** primeNg Multi Select styles *******************************************************/
+p-multiselect > div.ui-multiselect {
+    border-left: 5px solid $ng-valid; /* green */
+}
+
+p-multiselect.ng-invalid:not(form) > div.ui-multiselect {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+p-multiselect.ng-invalid {
+    border-left: 0 none;
+}
+
+#userMSelRoles > div.ui-multiselect {
+    border-left: 0 none;
+}
+/** End primeNg Multi Select styles *******************************************************/
+
+/** General styles ************************************************************************/
+.alert-height {
+    height: 34px;
+    line-height: 0px;
+    margin-top:1px;
+}
+
+.btn-login-height {
+    height: 34px;
+    padding-top: 4px;
+}
+ 
+.control-height { 
+    height: 34px; 
+    padding-top: 2px; 
+}
+
+.nopad {
+    padding: 0px !important;
+}
+
+.formpad {
+    padding-left: 0px !important;
+}
+
+.addtestborder {
+    border: 1px solid black;
+}
+
+input#adduserTbxMiddleName.ng-valid {
+     border-left: 5px solid $ng-valid; /* green */
+}
+
+input#adduserTbxMiddleName.ng-invalid {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+input#edituserTbxMiddleName.ng-valid {
+     border-left: 5px solid $ng-valid; /* green */
+}
+
+input#edituserTbxMiddleName.ng-invalid {
+    border-left: 5px solid $ng-invalid; /* red */
+}
+
+.ui-picklist.editUserPickList .ui-picklist-list {
+    height: 95px;
+}
+
+.ui-picklist.editUserPickList .ui-picklist-buttons {
+	height: 137px;
+}
+
+.business-segment-picklist-wrapper {
+    padding-left:6px;
+    padding-right:12px;
+    padding-top:12px;
+    padding-bottom:6px;
+    margin-bottom:6px
+}
+
+.business-segment-item {
+    font-size:14px;
+    float:right;
+    margin:5px 5px 0 0
+}
+
+.business-segment-item-viewuser {
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    padding-left: 12px
+}
+
+.user-action-button-wrapper {
+    padding: 4px 0px 6px 20px;
+}
+
+.provider-action-button-wrapper {
+    padding: 15px 0px 6px 20px;
+}
+
+#viewuserDlSegments > div > div.ui-datalist-content {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #555;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075);
+    min-height: 34px;
+}
+
+#userMultiselRoles > div.ui-multiselect {
+    border-left: 0 none;    
+    padding-top: 2px;
+    height: 34px !important;
+}
+
+#userMultiselRoles > div > div > label {
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+}
+#contractlistMultiselBusinessSegment > div.ui-multiselect {
+    border-left: 1px solid #d6d6d6;
+    padding-top: 2px;
+    height: 34px !important;
+}
+#contractlistMultiselBusinessSegment > div > div > label {
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+}
+#contractlistMultiselContractStatus > div.ui-multiselect {
+    border-left: 1px solid #d6d6d6;
+    padding-top: 2px;
+    height: 34px !important;
+}
+#contractlistMultiselContractStatus > div > div > label {
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+}
+#contractlistMultiselProduct > div.ui-multiselect {
+    border-left: 1px solid #d6d6d6;
+    padding-top: 2px;
+    height: 34px !important;
+}
+#contractlistMultiselProduct > div > div > label {
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+}
+#contractlistMultiselFields > div.ui-multiselect {
+    border-left: 1px solid #d6d6d6;
+    height: 29px !important;
+    width: 25%;    
+}
+#contractlistMultiselFields > div > div > label {
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    height: 28px !important;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 0px;
+}
+
+#contractlistMultiselAddedBy > div.ui-multiselect {
+    border-left: 1px solid #d6d6d6;
+    padding-top: 2px;
+    height: 34px !important;
+}
+#contractlistMultiselAddedBy > div > div > label {
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+}
+#contractlistMultiselClaimsAuditor > div.ui-multiselect {
+    border-left: 1px solid #d6d6d6;
+    padding-top: 2px;
+    height: 34px !important;
+}
+#contractlistMultiselClaimsAuditor > div > div > label {
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+}
+#contractlistMultiselRestrictedClaimsAuditor > div.ui-multiselect {
+    border-left: 1px solid #d6d6d6;
+    padding-top: 2px;
+    height: 34px !important;
+}
+#contractlistMultiselRestrictedClaimsAuditor > div > div > label {
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+}
+.sdk-userbar-text
+  {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #555;
+  }
+#edituserDdlRole > span > input {
+    //width: 100%;
+    height: 34px;
+    border-bottom-color: #c0c0c0;
+}
+#edituserDdlRole > span > button {
+    width: 1.5em;
+    height: 34px;
+}
+.crud-controls-col-width {
+    width: 80px;
+}
+.crud-controls-col-width-1 {
+    width: 42px;
+}
+.grid-col-width-id {
+    width: 60px;
+}
+.ui-tabview-nav {
+    border: none;
+}
+.background-transparent {
+    background-color: transparent;
+}
+/** End general styles **********************************************************************/
+

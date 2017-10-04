@@ -1,0 +1,94 @@
+$color-gray-3 : #B3B3B3;
+$color-gray-6 : #666666;
+$color-gray-8: #333333;
+
+.side-menu-container {    
+    position: relative;
+    border-right:.1rem solid $color-gray-6;
+    height:100%;
+}
+
+.side-menu-container, ul, li, a {
+  background:$color-gray-6; 
+  border:none;
+  color: white;
+  cursor:pointer;
+}
+
+
+.btn-toggle {
+    color:white;
+    position:relative;
+    left:.15rem;
+    height:5rem;
+    width:5rem;
+    box-shadow: none;
+    background: transparent;
+    outline: none;
+    border:none;
+}
+
+
+.side-menu {
+    width:5rem;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    text-align: left;
+    font-size:1.5rem;
+}
+.side-menu i {
+  font-size:1.5rem;
+}
+
+.side-menu.active {
+    width:20rem;
+}
+
+.nav-label {
+  display: none;
+}
+
+.side-menu.active .nav-label {
+  display:inline;
+}
+
+
+.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 0;
+  height: 3px;
+  width: 30px;
+  background: #666666;
+  position: absolute;
+  display: block;
+  content: '';
+}
+.nav-toggle span:before {
+  top: -10px;
+}
+.nav-toggle span:after {
+  bottom: -10px;
+}
+.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+  transition: all 200ms ease-in-out;
+}
+.btn-toggle.active .nav-toggle span {
+  background-color: transparent;
+}
+.btn-toggle.active .nav-toggle span:before, .btn-toggle.active .nav-toggle span:after {
+  top: 0;
+}
+.btn-toggle.active .nav-toggle span:before {
+  transform: rotate(45deg);
+}
+.btn-toggle.active .nav-toggle span:after {
+  transform: rotate(-45deg);
+}
+.icon {
+  margin-left:.5rem;
+}
+.expander {
+  margin-right:1rem;
+  font-size:1rem!important;
+  margin-top:.5rem;
+}

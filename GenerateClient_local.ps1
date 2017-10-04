@@ -1,0 +1,1 @@
+Start-Process java -ArgumentList '-jar', 'swagger-codegen-cli-2.2.1.jar generate  -i  http://localhost:25206/swagger/v1/swagger.json  -l typescript-angular2  -o C:\_scratch\_contract_models' -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'

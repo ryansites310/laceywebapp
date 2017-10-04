@@ -1,0 +1,23 @@
+<app-alert></app-alert>
+<app-nav></app-nav>
+<div id="wrapper" [ngClass]="{'toggled' : showSideNav}">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <div class="sidebar-nav">
+            <ul class="list-group">
+                <li class="list-group-item toggler" (click)="sideNavToggled($event)">
+                    <em class="fa" [ngClass]="{'fa-chevron-right' : !showSideNav, 'fa-chevron-left' : showSideNav}"></em>
+                </li>
+                <app-nav-item *ngFor="let nav of navigation.links" [link]="nav" [isSideNav]="true" (itemClicked)="itemClicked($event)"></app-nav-item>
+            </ul>
+        </div>
+    </div>
+    <div id="page-content-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<footer class="footer navbar navbar-fixed-bottom">
+    <div class="container">
+        <p class="text-muted">&copy;<span id="demo-year">{{year}}</span> Ryan Sites. All rights reserved.</p>
+    </div>
+</footer>
