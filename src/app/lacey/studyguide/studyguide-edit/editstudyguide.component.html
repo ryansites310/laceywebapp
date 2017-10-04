@@ -13,7 +13,7 @@
 <div class="container-fluid sdk-card">
   <div class="row">
     <!-- begin form -->
-    <form id='edituserForm' #editUserForm="ngForm" (ngSubmit)="editUser()" #spyForm>
+    <form id='edituserForm' #editStudyGuideForm="ngForm" (ngSubmit)="editStudyGuide()" #spyForm>
 
       <div class="col-xs-12 col-md-12">
         <!-- test name -->
@@ -35,8 +35,7 @@
       </div>
 
       <div class="col-xs-12 col-md-12">
-        <p-dataTable id="userDtList" [value]="cards" [totalRecords]="totalRecords"
-          [loading]="loading" loadingIcon="fa-spinner">
+        <p-dataTable id="userDtList" [value]="cards">
           <p-header>Study Cards</p-header>
           <p-header>
             <div class="ui-helper-clearfix" style="width:100%">
@@ -91,7 +90,7 @@
 
       <!-- buttons -->
       <div class="col-xs-12 col-md-12 studyguide-action-button-wrapper">
-        <button pButton type="submit" id="edituserBtnSave" label="Save" icon="fa-check" [disabled]="(!editUserForm.form.dirty) || editUserForm.form.invalid"></button>
+        <button pButton type="submit" id="edituserBtnSave" label="Save" icon="fa-check" [disabled]="(!editStudyGuideForm.form.dirty) || editStudyGuideForm.form.invalid"></button>
         <button pButton type="button" id="edituserBtnReturn" label="Cancel" icon="fa-arrow-left" [routerLink]="['/studyguide']"></button>
       </div>
 
