@@ -28,7 +28,7 @@ import { DeactivateGuard } from './sdk/shared/guards/deactivate.guard';
 import { NavItemComponent } from './sdk/core/nav/nav-item/nav-item.component';
 import { HomeComponent } from './sdk/shared/home/home.component';
 
-import * as _model from './contractaudit/shared/models/models';
+import * as _model from './lacey/shared/model/models';
 import { Role } from './sdk/core/shared/models/role.model';
 import { IUser } from './sdk/core/shared/models/iuser.model';
 import { environment } from '../environments/environment';

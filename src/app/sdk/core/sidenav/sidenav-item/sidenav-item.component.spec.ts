@@ -14,7 +14,7 @@ import * as moment from 'moment';
 describe('SidenavItemComponent', () => {
   let component: SidenavItemComponent;
   let fixture: ComponentFixture<SidenavItemComponent>;
-  //const user: IUser = ;
+  //const studyguide: IUser = ;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -70,7 +70,7 @@ describe('SidenavItemComponent', () => {
 
     component.setVisibility({
       firstName: 'ccat',
-      lastName: 'user',
+      lastName: 'studyguide',
       userName: 'userName',
       roles: [
           { name: 'Contract Maintenance User', description: '' },
@@ -92,7 +92,7 @@ describe('SidenavItemComponent', () => {
     const now = moment();
     component.setVisibility({
       firstName: 'ccat',
-      lastName: 'user',
+      lastName: 'studyguide',
       userName: 'userName',
       roles: [
           { name: 'Contract Maintenance User', description: '' },

@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
-app.use(cookieParser('contractAudit8675309'));
+app.use(cookieParser('lacey8675309'));
 app.use(cors({
   credentials: true,
   origin: true

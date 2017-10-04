@@ -5,7 +5,7 @@
 def AGENT_FOR_BUILD = 'docker-dotnet-nodejs'
 def AGENT_FOR_DOCKER = 'docker-dotnet-nodejs'
 def AGENT_FOR_DEPLOY = 'docker-dotnet-nodejs'
-def BUILD_NOTIFICATION_EMAIL = 'ContractAuditScrumTeam_DL@ds.uhc.com'
+def BUILD_NOTIFICATION_EMAIL = 'laceyScrumTeam_DL@ds.uhc.com'
 
 
 // Build, Test and Analyze Properties
@@ -14,17 +14,17 @@ def SONARQB_ENV = 'Sonar'
 
 // DTR Publishing Properties
 def DOCKER_IMAGE_TAG 
-def DOCKER_IMAGE_REPO = 'docker.optum.com/contract_audit_tool/contractaudit-ui'
+def DOCKER_IMAGE_REPO = 'docker.optum.com/contract_audit_tool/lacey-ui'
 def DOCKERFILE_PATH = '.'
 def DTR_CREDENTIALS_ID = '39df5d66-3825-484a-aa2d-5e378a62442e'
 
 //Approval Workflow Properties
-def STG_DEPLOYMENT_APPROVER_EMAIL = 'ContractAuditScrumTeam_DL@ds.uhc.com'
-def STG_DEPLOYMENT_APPROVER = 'ContractAudit_DevOps_Team'
+def STG_DEPLOYMENT_APPROVER_EMAIL = 'laceyScrumTeam_DL@ds.uhc.com'
+def STG_DEPLOYMENT_APPROVER = 'lacey_DevOps_Team'
 def STG_APPROVAL_TIMEOUT_DAYS = "5"
 
-def PROD_DEPLOYMENT_APPROVER_EMAIL = 'ContractAuditScrumTeam_DL@ds.uhc.com'
-def PROD_DEPLOYMENT_APPROVER = 'ContractAudit_DevOps_Team'
+def PROD_DEPLOYMENT_APPROVER_EMAIL = 'laceyScrumTeam_DL@ds.uhc.com'
+def PROD_DEPLOYMENT_APPROVER = 'lacey_DevOps_Team'
 def PROD_APPROVAL_TIMEOUT_DAYS = "10"
 
 // OSE Deployment Properties
@@ -33,9 +33,9 @@ def OSE_CLUSTER_TEST = 'OSECTC-CCAT-TST'
 def OSE_CLUSTER_STAGE = 'OSECTC-CCAT-STG' 
 def OSE_CLUSTER_PROD = 'OSECTC-CCAT-PROD' 
 
-def OSE_APP_SERVICE = 'contractaudit-ui' 
+def OSE_APP_SERVICE = 'lacey-ui' 
 
-def DEV_PENTEST_URL = 'http://ui-contractaudit-dev.ose-ctc-core.optum.com/'
+def DEV_PENTEST_URL = 'http://ui-lacey-dev.ose-ctc-core.optum.com/'
 
 @Library("com.optum.opi.jenkins.pipeline.library") _
 try{

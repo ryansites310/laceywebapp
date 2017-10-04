@@ -60,7 +60,7 @@ describe('NavItemComponent', () => {
     link.roles = roles;
     component.setVisibility({
       firstName: 'ccat',
-      lastName: 'user',
+      lastName: 'studyguide',
       userName: 'userName',
       roles: [
           { name: 'Contract Maintenance User', description: '' },
@@ -81,7 +81,7 @@ describe('NavItemComponent', () => {
     link.roles = roles;
     component.setVisibility({
       firstName: 'ccat',
-      lastName: 'user',
+      lastName: 'studyguide',
       userName: 'userName',
       roles: [
           { name: 'Contract Maintenance User', description: '' },

@@ -1,1 +1,1 @@
-Start-Process java -ArgumentList '-jar', 'swagger-codegen-cli-2.2.1.jar generate  -i  https://api-contractaudit-dev.ose-ctc-core.optum.com/swagger/v1/swagger.json  -l typescript-angular2  -o generation' -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'
+Start-Process java -ArgumentList '-jar', 'swagger-codegen-cli-2.2.1.jar generate  -i  https://api-lacey-dev.ose-ctc-core.optum.com/swagger/v1/swagger.json  -l typescript-angular2  -o generation' -RedirectStandardOutput '.\console.out' -RedirectStandardError '.\console.err'

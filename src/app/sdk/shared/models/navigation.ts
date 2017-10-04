@@ -13,7 +13,7 @@ export const navigation = {
          {
             'label': 'Study Guides',
             'icon': 'fa fa-book',
-            'url': '/user',
+            'url': '/studyguide',
             'children': [],
             'tooltip': 'Study Guide',
             'show': false,

@@ -8,7 +8,7 @@ import { HomeComponent } from './sdk/shared/home/home.component';
 
 const routes: Routes = [
   { path: '',  component: HomeComponent, pathMatch: 'full' },
-  { path: 'user', loadChildren : 'app/contractaudit/user/user.module#UserModule'},
+  { path: 'studyguide', loadChildren : 'app/lacey/studyguide/studyguide.module#StudyGuideModule'},
   { path: '**', component: PageNotFoundComponent }
 ];
 

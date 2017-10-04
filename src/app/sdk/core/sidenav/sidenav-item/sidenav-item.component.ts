@@ -36,19 +36,19 @@ export class SidenavItemComponent implements OnInit {
     this.link.show = !this.link.show;
   }
 
-  setVisibility(user: IUser, link: Link) {
+  setVisibility(studyguide: IUser, link: Link) {
     this.visibleByRole = false;
     if (link === undefined) {
       return;
     }
     if (!link.protected) {
       this.visibleByRole = true;
-    } else if (link.protected && link.roles && user) {
+    } else if (link.protected && link.roles && studyguide) {
       if (link.roles[0] === 'all') {
         this.visibleByRole = true;
       } else {
         let hasRole = false;
-        user.roles.map(role => {
+        studyguide.roles.map(role => {
           link.roles.map(linkRole => {
             if (role.name === linkRole) {
               hasRole = true;

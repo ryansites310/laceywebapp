@@ -27,7 +27,7 @@ describe('DeactivateGuard', () => {
   //   expect(guard).toBeTruthy();
   // }));
 
-  // it('+ should not allow user to overcome the guard for whatever reasons', inject([DeactivateGuard], (guard: DeactivateGuard) => {
+  // it('+ should not allow studyguide to overcome the guard for whatever reasons', inject([DeactivateGuard], (guard: DeactivateGuard) => {
   //   expect(guard.canDeactivate(new DummyComponent())).toBe(true);
   // }));
 });
