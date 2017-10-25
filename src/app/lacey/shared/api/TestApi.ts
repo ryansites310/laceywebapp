@@ -49,7 +49,11 @@ export class TestApi {
 
         let queryParameters = new URLSearchParams();
         let headerParams = this.defaultHeaders;
-         headerParams.append('Content-Type', 'application/json');
+        headerParams.append('Content-Type', 'application/json');
+        headerParams.append('Cache-control', 'no-cache');
+        headerParams.append('Cache-control', 'no-store');
+        headerParams.append('Expires', '0');
+        headerParams.append('Pragma', 'no-cache');
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling apiTestByIdGet.');
@@ -76,6 +80,11 @@ export class TestApi {
         let queryParameters = new URLSearchParams();
         let headerParams = this.defaultHeaders;
          headerParams.append('Content-Type', 'application/json');
+        headerParams.append('Cache-control', 'no-cache');
+        headerParams.append('Cache-control', 'no-store');
+        headerParams.append('Expires', '0');
+        headerParams.append('Pragma', 'no-cache');
+
         let requestOptions: RequestOptionsArgs = {
             method: 'POST',
             headers: headerParams,
@@ -99,6 +108,11 @@ export class TestApi {
 
         let queryParameters = new URLSearchParams();
         let headerParams = this.defaultHeaders;
+         headerParams.append('Content-Type', 'application/json');
+        headerParams.append('Cache-control', 'no-cache');
+        headerParams.append('Cache-control', 'no-store');
+        headerParams.append('Expires', '0');
+        headerParams.append('Pragma', 'no-cache');
         let requestOptions: RequestOptionsArgs = {
             method: 'PUT',
             headers: headerParams,
@@ -123,6 +137,10 @@ export class TestApi {
         let queryParameters = new URLSearchParams();
         let headerParams = this.defaultHeaders;
          headerParams.append('Content-Type', 'application/json');
+        headerParams.append('Cache-control', 'no-cache');
+        headerParams.append('Cache-control', 'no-store');
+        headerParams.append('Expires', '0');
+        headerParams.append('Pragma', 'no-cache');
         let requestOptions: RequestOptionsArgs = {
             method: 'POST',
             headers: headerParams,
