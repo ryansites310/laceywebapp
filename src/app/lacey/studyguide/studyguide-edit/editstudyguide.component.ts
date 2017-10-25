@@ -55,7 +55,7 @@ export class EditStudyGuideComponent {
     }// getStudyGuideById()
 
     editStudyGuide() {
-
+        this.studyGuide.card = this.cards;
         // call service to insert new studyguide, and create client growls based on results...
         this.testApi.UpdateStudyGuide(this.studyGuide).subscribe(result => {
             const apiResult = result as _model.ResponseTestViewModel;
