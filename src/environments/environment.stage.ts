@@ -1,5 +1,4 @@
 export const environment = {
-  production: true,  
-  apiBaseUrl : 'http://stage-api-comprehensive-contract-audit-tool.ose-ctc-core.optum.com/',
+  production: true,    
   apiVersion : 'v1.0'
 };
